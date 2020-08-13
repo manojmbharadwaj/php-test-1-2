@@ -21,3 +21,4 @@ Route::get('/ajax', 'AjaxDemoController@index')->name('ajax');
 Route::get('/ajax/getUsers', 'AjaxDemoController@getUsersList')->name('ajax.userslist');
 Route::post('/ajax/store', 'AjaxDemoController@store')->name('ajax.store');
 Route::post('/ajax/update/{id}', 'AjaxDemoController@update')->name('ajax.update');
+Route::post('/ajax/delete/{id}', 'AjaxDemoController@delete')->name('ajax.delete');

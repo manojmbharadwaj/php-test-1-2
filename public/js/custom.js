@@ -25,6 +25,26 @@ $(document).ready(function(){
         $('#userModal').modal('show');
     });
 
+    $('body').on('click', '.delete-user-btn', function() {
+        if ( confirm('Are you sure want to Delete? The action is not reversable.') ) {
+            const userId = $(this).closest('tr').children('td:first').find('.u_id').val();
+            const _token = $('#_token').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/ajax/delete/' + userId,
+                data: { id: userId, _token:_token },
+                success: function(msg) {
+                    loadUsers();
+                },
+                error: function() {
+                    alert("Something went wrong!. Please try again");
+                }
+            });
+            return false;
+        }
+    });
+
     $("#modal_form").submit(function() {
 
         const action = $('#action').val();

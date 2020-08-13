@@ -94,8 +94,14 @@ class User extends Authenticatable
                 'city' => request('city'),
             ];
 
-            return \DB::table('users')->where('id', $id)->update($user);
+            return User::where('id', $id)->update($user);
         }
+    }
+
+    public static function deleteUser($id)
+    {
+        $user = User::find($id);
+        $user->delete();
     }
 
 }

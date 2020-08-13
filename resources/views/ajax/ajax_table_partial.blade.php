@@ -17,7 +17,7 @@
                 <button class="btn btn-sm btn-info edit-modal-btn text-white">Edit</button>
             </td>
             <td>
-                <button class="btn btn-sm btn-danger text-white">Delete</button>
+                <button class="btn btn-sm btn-danger text-white delete-user-btn">Delete</button>
             </td>
         </tr>
     @endforeach

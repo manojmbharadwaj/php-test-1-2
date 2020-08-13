@@ -32,4 +32,9 @@ class AjaxDemoController extends Controller
         return view('ajax.ajax_table_partial', $data);
     }
 
+    public function delete($id)
+    {
+        User::deleteUser($id);
+    }
+
 }
