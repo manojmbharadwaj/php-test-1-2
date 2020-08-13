@@ -48,19 +48,34 @@
                 font-size: 84px;
             }
 
-            .links > a {
+            .links ul li > a {
                 color: #636b6f;
-                padding: 0 25px;
+                padding: 10px 25px;
                 font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                border: 1px solid #ddd;
+
             }
 
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            ul {
+                list-style-type: none;
+            }
+
+            ul li {
+                margin-top: 25px;
+            }
+
+            /*a {
+                text-decoration: none;
+            }*/
+
         </style>
     </head>
     <body>
@@ -81,18 +96,21 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    PHP Test
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <ul>
+                        <li>
+                            <a href="api/user?id=1,2,3,4,5" target="_blank">for RESTful</a>
+                        </li>
+                        <li>
+                            <a href="api/user?id=1,2,3,4,5&fmt=1" target="_blank">for RESTful with FMT tag</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('ajax') }}">CRUD:AJAX</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

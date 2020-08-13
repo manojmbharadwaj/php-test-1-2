@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('landing_page');
 
-// Route::get('/rest/');
+Route::get('/ajax', 'AjaxDemoController@index')->name('ajax');
+Route::get('/ajax/getUsers', 'AjaxDemoController@getUsersList')->name('ajax.userslist');
+Route::post('/ajax/store', 'AjaxDemoController@store')->name('ajax.store');
+Route::post('/ajax/update/{id}', 'AjaxDemoController@update')->name('ajax.update');

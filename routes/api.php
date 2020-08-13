@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+// Route::get('rest/{id}/{fmt?}', 'RestDemoController@index')->name('rest.list');
+Route::get('user', ['as' => 'search', 'uses' => 'RestDemoController@index'])->name('rest.list');
